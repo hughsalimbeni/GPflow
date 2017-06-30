@@ -142,6 +142,7 @@ class Model(Parameterized):
             else:
                 opt_step = optimizer.minimize(self._minusF,
                                               var_list=[self._free_vars])
+
             init = tf.global_variables_initializer()
         self._session.run(init)
 
