@@ -135,6 +135,7 @@ class Model(Parameterized):
             self._minusF = tf.negative(f, name='objective')
             self._minusG = tf.negative(g, name='grad_objective')
 
+
             # The optimiser needs to be part of the computational graph, and needs
             # to be initialised before tf.initialise_all_variables() is called.
             if optimizer is None:
